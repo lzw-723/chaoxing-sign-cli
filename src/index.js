@@ -54,3 +54,13 @@ const rl = readline.createInterface()
   // }
   // }
 }()
+
+exports.main_handler = async (event, context) => {
+  console.log("start check")
+  await GeneralSign(params.uf, params._d, params.vc3, name, aid, params._uid, params.fid)
+  // process.exit(0)
+  console.log(event)
+  console.log(event["non-exist"])
+  console.log(context)
+  return event
+};
